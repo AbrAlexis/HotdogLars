@@ -9,10 +9,10 @@ public class BestillingsTjekker : MonoBehaviour
 {
     PlayerOrdrer playerOrdrerRef;
     NPCBestilling NPCBestillingRef;
-
     GameObject gameManager;
 
-    
+
+
     public List<string> testliste = new List<string>();
     void Start()
     {
