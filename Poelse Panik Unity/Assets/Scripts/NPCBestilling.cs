@@ -6,19 +6,24 @@ using UnityEngine.UI;
 public class NPCBestilling : MonoBehaviour
 {
     public List<string> NPCordrer = new List<string>();
+    Timer timerRef;
+    GameObject gameManager;
+    public Text NPCordrerText;
+
 
     void Start()
     {
        // TilfældigIngrediens();
         OrdrerGenerering(5);
+        gameManager = GameObject.Find("GameManager");
+        timerRef = gameManager.GetComponent<Timer>();
     }
 
  
     void Update()
     {
-        
+        HideBestilling();
     }
-    public Text NPCordrerText;
 
     
     public void OrdrerGenerering(int a)
@@ -54,6 +59,14 @@ public class NPCBestilling : MonoBehaviour
         return randIng;
        
 
+    }
+
+    void HideBestilling()
+    {
+        if (timerRef.timeRemaining <= 0)
+        {
+            NPCordrerText.gameObject.SetActive(false);
+        }
     }
 
 }
