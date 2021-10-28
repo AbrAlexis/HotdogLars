@@ -1,0 +1,2 @@
+﻿[Failure] Could not find file 'C:\Users\alexa\My project (4)\Assets\Scripts\Arrays.cs'.
+[Failure] Could not find file 'C:\Users\alexa\My project (4)\Assets\Scripts\NPC Bestilling.cs'.
