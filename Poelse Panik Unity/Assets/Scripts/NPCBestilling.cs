@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
+
 
 public class NPCBestilling : MonoBehaviour
 {
@@ -14,7 +16,6 @@ public class NPCBestilling : MonoBehaviour
     void Start()
     {
        // TilfældigIngrediens();
-        OrdrerGenerering(5);
         gameManager = GameObject.Find("GameManager");
         timerRef = gameManager.GetComponent<Timer>();
     }
@@ -28,34 +29,41 @@ public class NPCBestilling : MonoBehaviour
     
     public void OrdrerGenerering(int a)
     {
-       
 
-        
         for (int i = 0; i < a; i++)
         {
             NPCordrer.Add(TilfældigIngrediens());
-            
         }
 
 
-
-        string NPC_Bestilling_Streng = "";
         NPCordrer.Sort();
-        for (int i = 0; i < NPCordrer.Count; i++)
-        {
-            NPC_Bestilling_Streng = NPC_Bestilling_Streng + NPCordrer[i] + " ";
-            NPCordrerText.text = NPC_Bestilling_Streng;
-        }
 
-            
+        // Tæller antal af de samme iteams i en liste og laver et dictionary af resultatet
+        var dictionary = NPCordrer.GroupBy(x => x)
+              .Where(g => g.Count() > 1)
+              .ToDictionary(x => x.Key, y => y.Count());
+
+
+        Dictionary<string, int> NPCordrerDic = new Dictionary<string, int>();
+        NPCordrerDic = dictionary;
+
+        // Går i gennem dictionary'et og laver en streng som vises 
+        string NPC_Bestilling_Streng = "";
+        foreach (KeyValuePair<string, int> item in NPCordrerDic)
+        {
+            NPC_Bestilling_Streng = NPC_Bestilling_Streng + item.Value + " " + item.Key + ", ";
+        }
+        
+        // Fjerner de sidste to karakterer i stregen så der ikke står ", " tilsidst
+        NPC_Bestilling_Streng = NPC_Bestilling_Streng.Remove(NPC_Bestilling_Streng.Length - 2);
         NPCordrerText.text = NPC_Bestilling_Streng;
     }
 
     public string TilfældigIngrediens()
     {
+        // Vælger en tilfældig ingredise og returner den
         string[] ingredienser = {"Pølse", "Brød", "Cola", "Fritter"};
         string randIng = ingredienser[Random.Range(0, ingredienser.Length)];
-        Debug.Log(randIng);
         return randIng;
        
 
