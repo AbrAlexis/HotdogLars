@@ -11,9 +11,7 @@ public class BestillingsTjekker : MonoBehaviour
     NPCBestilling NPCBestillingRef;
     GameObject gameManager;
 
-
-
-    public List<string> testliste = new List<string>();
+    public bool BestillingerEns = false;
     void Start()
     {
         gameManager = GameObject.Find("GameManager");
@@ -26,25 +24,11 @@ public class BestillingsTjekker : MonoBehaviour
     {
         
     }
-    public static void Main()
-    {
-        
-        if (true)
-        {
-          //  Console.WriteLine("Lists are Equal");
-        }
-        else
-        {
-            //Console.WriteLine("Lists are not Equal");
-        }
-   
-        
-        }
 
     public void CompareOrders()
     {
         bool isEqual = Enumerable.SequenceEqual(playerOrdrerRef.ordrer, NPCBestillingRef.NPCordrer);
-        print(isEqual);
+        BestillingerEns = isEqual;
     }
         
 }
