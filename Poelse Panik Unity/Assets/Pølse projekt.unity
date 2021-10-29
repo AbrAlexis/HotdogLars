@@ -239,7 +239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -300, y: 117.17}
+  m_AnchoredPosition: {x: -300, y: 117.16998}
   m_SizeDelta: {x: 426.089, y: 134.089}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115750248
@@ -498,10 +498,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2085793967}
-        m_TargetAssemblyTypeName: Arrays, Assembly-CSharp
-        m_MethodName: SletIngrediens
-        m_Mode: 5
+      - m_Target: {fileID: 2085793974}
+        m_TargetAssemblyTypeName: Items, Assembly-CSharp
+        m_MethodName: AddInventoryItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1008,7 +1008,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 22 x
+  m_Text: 0
 --- !u!222 &299022748
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1087,7 +1087,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 22 x
+  m_Text: 0
 --- !u!222 &421016502
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1132,7 +1132,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -94.006165, y: -63.48468}
+  m_AnchoredPosition: {x: -94.0061, y: -63.48462}
   m_SizeDelta: {x: 177.06494, y: 116.02197}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427959094
@@ -1346,7 +1346,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 22 x
+  m_Text: 0
 --- !u!222 &555778802
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3136,9 +3136,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2085793967}
-        m_TargetAssemblyTypeName: Arrays, Assembly-CSharp
-        m_MethodName: SletIngrediens
+      - m_Target: {fileID: 2085793974}
+        m_TargetAssemblyTypeName: Items, Assembly-CSharp
+        m_MethodName: AddInventoryItem
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3791,6 +3791,7 @@ GameObject:
   - component: {fileID: 2085793971}
   - component: {fileID: 2085793972}
   - component: {fileID: 2085793973}
+  - component: {fileID: 2085793974}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3892,6 +3893,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75269fa69249b748a0ee7d090039f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2085793974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085793966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea3a86b0d9180746979dc9e3ac4d172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2091271005
 GameObject:
   m_ObjectHideFlags: 0
@@ -3962,7 +3975,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 22 x
+  m_Text: 0
 --- !u!222 &2091271008
 CanvasRenderer:
   m_ObjectHideFlags: 0
