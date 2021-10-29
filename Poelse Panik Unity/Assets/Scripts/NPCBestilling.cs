@@ -12,6 +12,21 @@ public class NPCBestilling : MonoBehaviour
     GameObject gameManager;
     public Text NPCordrerText;
 
+    public class item
+    {
+        public string name;
+        public int count;
+        public Text text;
+
+        public item(string Name, Text Text)
+        {
+            name = Name;
+            count = 0;
+            text = Text;
+        }
+
+    }
+
 
     void Start()
     {
