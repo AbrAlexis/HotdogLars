@@ -21,14 +21,14 @@ public class Items : MonoBehaviour
 
         PlayerItemsDict = ItemsDict;
         ResetItemsCount();
-        Chooseitems(4 + 1);
+        Chooseitems(4);
         ChooseNumOfItems();
     }
 
     // Update is called once per frame
     void Update()
     {
-        printDict();
+        //printDict();
     }
 
     void printDict()
@@ -44,7 +44,7 @@ public class Items : MonoBehaviour
         foreach(string key in ItemsDict.Keys) 
         {
             KeysLst.Add(key);
-            print(key);
+
         }
 
         foreach(string key in KeysLst)
@@ -61,10 +61,20 @@ public class Items : MonoBehaviour
 
     void Chooseitems(int NumItemsWanted)
     {
+        int lenght = 0;
 
-        for (int i = 0; i < NumItemsWanted; i++)
+        while (lenght < NumItemsWanted)
         {
-            ItemsChoosen.Add(ChooseItem());
+            string itemChoosen = ChooseItem();
+            var match = ItemsChoosen.Contains(itemChoosen);
+
+            if (match == false)
+            {
+                ItemsChoosen.Add(ChooseItem());
+                Debug.Log(itemChoosen);
+            }
+
+            lenght = ItemsChoosen.Count();
         } 
     }
 
@@ -72,7 +82,7 @@ public class Items : MonoBehaviour
     {
         foreach(string Item in ItemsChoosen)
         {
-            ItemsDict[Item] = Random.Range(0, 0);
+            ItemsDict[Item] = Random.Range(1, 5);
         }
     }
     public void AddInventoryItem(string ButtonItem)
