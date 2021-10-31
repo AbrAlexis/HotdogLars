@@ -5,21 +5,21 @@ using UnityEngine.UI;
 
 public class TextControllerPlayer : TextController
 {
-    Items itemsRef;
-    Dictionary<string, int> itemsDictPlayer = new Dictionary<string, int>();
-    GameObject gameManager;
+    Items items_Ref;
+    Dictionary<string, int> itemsDictPlayer_ = new Dictionary<string, int>();
+    GameObject GameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("GameManager");
-        itemsRef = gameManager.GetComponent<Items>();
+        GameManager = GameObject.Find("GameManager");
+        items_Ref = GameManager.GetComponent<Items>();
+        itemsDictPlayer_ = items_Ref.PlayerItemsDict;
     }
 
     // Update is called once per frame
     void Update()
     {
-        itemsDictPlayer = itemsRef.PlayerItemsDict;
-        UpdateItemText(textItem, itemsDictPlayer, itemTextRef);
+        UpdateItemText(textItem, itemsDictPlayer_, itemTextRef);
     }
 }

@@ -1603,8 +1603,8 @@ GameObject:
   m_Component:
   - component: {fileID: 507876136}
   - component: {fileID: 507876139}
-  - component: {fileID: 507876138}
   - component: {fileID: 507876137}
+  - component: {fileID: 507876138}
   m_Layer: 5
   m_Name: "L\xF8gBorder"
   m_TagString: Untagged
@@ -2294,7 +2294,6 @@ GameObject:
   m_Component:
   - component: {fileID: 648443059}
   - component: {fileID: 648443063}
-  - component: {fileID: 648443060}
   - component: {fileID: 648443062}
   - component: {fileID: 648443061}
   m_Layer: 5
@@ -2325,20 +2324,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 177.065, y: 116.022}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &648443060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 648443058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b06db509e4db18408715b3be02e3b17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemImage: {fileID: 648443062}
-  itemString: Fritter
 --- !u!114 &648443061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2527,6 +2512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 687099935}
   itemString: Cola
+  firstTime: 1
 --- !u!114 &663211578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2541,6 +2527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1205085079}
   itemString: "Br\xF8d"
+  firstTime: 1
 --- !u!114 &663211579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2555,6 +2542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1391837860}
   itemString: Fritter
+  firstTime: 1
 --- !u!114 &663211580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2569,6 +2557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 723319466}
   itemString: "P\xF8lse"
+  firstTime: 1
 --- !u!114 &663211581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2583,6 +2572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1043078069}
   itemString: "L\xF8g"
+  firstTime: 1
 --- !u!114 &663211582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2597,6 +2587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 217358642}
   itemString: Cocio
+  firstTime: 1
 --- !u!114 &663211583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2611,6 +2602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 2125359672}
   itemString: SyltedeAgurker
+  firstTime: 1
 --- !u!1 &682752821
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,7 +3419,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1030088643}
   - component: {fileID: 1030088647}
-  - component: {fileID: 1030088644}
   - component: {fileID: 1030088646}
   - component: {fileID: 1030088645}
   m_Layer: 5
@@ -3458,20 +3449,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 177.065, y: 116.022}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1030088644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030088642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b06db509e4db18408715b3be02e3b17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemImage: {fileID: 1030088646}
-  itemString: "P\xF8lse"
 --- !u!114 &1030088645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4448,7 +4425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 806, y: 364}
+  m_AnchoredPosition: {x: 820, y: 173.17}
   m_SizeDelta: {x: 215.152, y: 106.123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1532551657
@@ -4661,7 +4638,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1636403695}
   - component: {fileID: 1636403699}
-  - component: {fileID: 1636403696}
   - component: {fileID: 1636403698}
   - component: {fileID: 1636403697}
   m_Layer: 5
@@ -4692,20 +4668,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 179.07, y: 116.022}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1636403696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636403694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b06db509e4db18408715b3be02e3b17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemImage: {fileID: 1636403698}
-  itemString: "Br\xF8d"
 --- !u!114 &1636403697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5060,7 +5022,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1865994971}
   - component: {fileID: 1865994975}
-  - component: {fileID: 1865994972}
   - component: {fileID: 1865994974}
   - component: {fileID: 1865994973}
   m_Layer: 5
@@ -5091,20 +5052,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 177.065, y: 116.022}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1865994972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865994970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b06db509e4db18408715b3be02e3b17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemImage: {fileID: 1865994974}
-  itemString: Cola
 --- !u!114 &1865994973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5810,6 +5757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 648443062}
   itemString: Fritter
+  firstTime: 1
 --- !u!114 &2041772783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5824,6 +5772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1865994974}
   itemString: Cola
+  firstTime: 1
 --- !u!114 &2041772784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5838,6 +5787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1636403698}
   itemString: "Br\xF8d"
+  firstTime: 1
 --- !u!114 &2041772785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5852,6 +5802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1030088646}
   itemString: "P\xF8lse"
+  firstTime: 1
 --- !u!114 &2041772786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5866,6 +5817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 507876138}
   itemString: "L\xF8g"
+  firstTime: 1
 --- !u!114 &2041772787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5880,6 +5832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1891607303}
   itemString: Cocio
+  firstTime: 1
 --- !u!114 &2041772788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5894,6 +5847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 930840485}
   itemString: SyltedeAgurker
+  firstTime: 1
 --- !u!1 &2064289848
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,7 +31,7 @@ public class Items : MonoBehaviour
         PlayerItemsDict.Add("SyltedeAgurker", 0);
         PlayerItemsDict.Add("Cocio", 0);
 
-        Chooseitems(7);
+        Chooseitems(5);
         ChooseNumOfItems();
     }
 
@@ -88,7 +88,6 @@ public class Items : MonoBehaviour
             if (match == false)
             {
                 ItemsChoosen.Add(itemChoosen);
-                Debug.Log(itemChoosen);
             }
 
             lenght = ItemsChoosen.Count();
@@ -107,6 +106,7 @@ public class Items : MonoBehaviour
         if (PlayerItemsDict[ButtonItem] < 99)
         {
             PlayerItemsDict[ButtonItem] += 1;
+            print(PlayerItemsDict[ButtonItem]);
         }
     }
     

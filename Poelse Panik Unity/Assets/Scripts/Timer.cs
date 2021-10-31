@@ -43,6 +43,7 @@ public class Timer : MonoBehaviour
         }
     }
 
+
     void EnableButtons()
     {
         if (timeRemaining <= 0 && buttons.activeSelf != true)
@@ -51,5 +52,4 @@ public class Timer : MonoBehaviour
             Debug.Log("ok");
         }
     }
-
 }
