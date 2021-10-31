@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Text timerText;
+    public Image NPCFrame;
+    public GameObject buttons;
     public float timeRemaining = 10f;
 
 
@@ -18,6 +20,13 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DisplayTimer();
+        HideOrder();
+        EnableButtons();
+    }
+
+    void DisplayTimer()
+    {
         if (timeRemaining > 0)
         {
             int i = (int)timeRemaining;
@@ -25,4 +34,22 @@ public class Timer : MonoBehaviour
             timeRemaining -= Time.deltaTime;
         }
     }
+
+    void HideOrder()
+    {
+        if (timeRemaining <= 0 && NPCFrame.enabled != false)
+        {
+            NPCFrame.gameObject.SetActive(false);
+        }
+    }
+
+    void EnableButtons()
+    {
+        if (timeRemaining <= 0 && buttons.activeSelf != true)
+        {
+            buttons.gameObject.SetActive(true);
+            Debug.Log("ok");
+        }
+    }
+
 }

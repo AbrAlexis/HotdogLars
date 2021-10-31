@@ -17,18 +17,18 @@ public class TextController : MonoBehaviour
         GameObject gameManager;
         gameManager = GameObject.Find("GameManager");
         itemsRef = gameManager.GetComponent<Items>();
-        itemsDict = itemsRef.ItemsDict;
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdateItemText(textItem);
+        itemsDict = itemsRef.ItemsDict;
+        UpdateItemText(textItem, itemsDict, itemTextRef);
     }
 
-    public void UpdateItemText(string textItem)
+    public void UpdateItemText(string textItem, Dictionary<string, int> Dict, Text itemTextRef)
     {
-        itemTextRef.text = itemsDict[textItem].ToString();
+        itemTextRef.text = Dict[textItem].ToString();
     }
 
 }

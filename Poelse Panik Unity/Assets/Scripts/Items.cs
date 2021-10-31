@@ -7,9 +7,9 @@ using System.Linq;
 public class Items : MonoBehaviour
 {
     public Dictionary<string, int> ItemsDict = new Dictionary<string, int>();
-    private Dictionary<string, int> PlayerItemsDict = new Dictionary<string, int>();
-    private List<string> KeysLst = new List<string>();
-    private List<string> ItemsChoosen = new List<string>();
+    public Dictionary<string, int> PlayerItemsDict = new Dictionary<string, int>();
+    List<string> KeysLst = new List<string>();
+    List<string> ItemsChoosen = new List<string>();
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +18,20 @@ public class Items : MonoBehaviour
         ItemsDict.Add("Fritter", 0);
         ItemsDict.Add("Pølse", 0);
         ItemsDict.Add("Cola", 0);
+        ItemsDict.Add("Løg", 0);
+        ItemsDict.Add("SyltedeAgurker", 0);
+        ItemsDict.Add("Cocio", 0);
 
-        PlayerItemsDict = ItemsDict;
-        ResetItemsCount();
-        Chooseitems(4);
+
+        PlayerItemsDict.Add("Brød", 0);
+        PlayerItemsDict.Add("Fritter", 0);
+        PlayerItemsDict.Add("Pølse", 0);
+        PlayerItemsDict.Add("Cola", 0);
+        PlayerItemsDict.Add("Løg", 0);
+        PlayerItemsDict.Add("SyltedeAgurker", 0);
+        PlayerItemsDict.Add("Cocio", 0);
+
+        Chooseitems(7);
         ChooseNumOfItems();
     }
 
@@ -39,15 +49,20 @@ public class Items : MonoBehaviour
         }
     }
 
-    public void ResetItemsCount() 
+    void GetKeys()
     {
-        foreach(string key in ItemsDict.Keys) 
+        foreach (string key in ItemsDict.Keys)
         {
             KeysLst.Add(key);
 
         }
+    }
 
-        foreach(string key in KeysLst)
+    public void ResetItemsCount() 
+    {
+        GetKeys();
+
+        foreach (string key in KeysLst)
         {
             ItemsDict[key] = 0;
         }
@@ -55,6 +70,8 @@ public class Items : MonoBehaviour
     }
     string ChooseItem()
     {
+        GetKeys();
+
         string item = KeysLst[Random.Range(0, KeysLst.Count)];
         return item;
     }
@@ -70,7 +87,7 @@ public class Items : MonoBehaviour
 
             if (match == false)
             {
-                ItemsChoosen.Add(ChooseItem());
+                ItemsChoosen.Add(itemChoosen);
                 Debug.Log(itemChoosen);
             }
 
@@ -87,9 +104,10 @@ public class Items : MonoBehaviour
     }
     public void AddInventoryItem(string ButtonItem)
     {
-        var match = ItemsChoosen.FirstOrDefault(stringToCheck => stringToCheck.Contains(ButtonItem));
-
-        if (match != null && PlayerItemsDict[ButtonItem] < 99)
+        if (PlayerItemsDict[ButtonItem] < 99)
+        {
             PlayerItemsDict[ButtonItem] += 1;
+        }
     }
+    
 }

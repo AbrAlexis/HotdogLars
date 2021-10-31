@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class BestillingsTjekker : MonoBehaviour
 {
-    PlayerOrdrer playerOrdrerRef;
+    //PlayerOrdrer playerOrdrerRef;
     NPCBestilling NPCBestillingRef;
     GameObject gameManager;
 
@@ -15,7 +15,7 @@ public class BestillingsTjekker : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager");
-        playerOrdrerRef = gameManager.GetComponent<PlayerOrdrer>();
+        //playerOrdrerRef = gameManager.GetComponent<PlayerOrdrer>();
         NPCBestillingRef = gameManager.GetComponent<NPCBestilling>();
     }
 
@@ -27,8 +27,8 @@ public class BestillingsTjekker : MonoBehaviour
 
     public void CompareOrders()
     {
-        bool isEqual = Enumerable.SequenceEqual(playerOrdrerRef.ordrer, NPCBestillingRef.NPCordrer);
-        BestillingerEns = isEqual;
+        //bool isEqual = Enumerable.SequenceEqual(playerOrdrerRef.ordrer, NPCBestillingRef.NPCordrer);
+        //BestillingerEns = isEqual;
     }
         
 }
