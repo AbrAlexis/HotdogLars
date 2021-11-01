@@ -9,6 +9,7 @@ public class WinCondition : MonoBehaviour
     GameObject gameManager;
     BestillingsTjekker bestillingsTjekkerRef;
     public Text checkOrdreText;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -49,7 +49,10 @@ public class Timer : MonoBehaviour
         if (timeRemaining <= 0 && buttons.activeSelf != true)
         {
             buttons.gameObject.SetActive(true);
-            Debug.Log("ok");
         }
     }
+    public void DisableButtons()
+    {
+        buttons.gameObject.SetActive(false);
+    } 
 }

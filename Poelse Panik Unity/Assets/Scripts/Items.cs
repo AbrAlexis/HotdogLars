@@ -31,7 +31,7 @@ public class Items : MonoBehaviour
         PlayerItemsDict.Add("SyltedeAgurker", 0);
         PlayerItemsDict.Add("Cocio", 0);
 
-        Chooseitems(5);
+        Chooseitems(3);
         ChooseNumOfItems();
     }
 
@@ -68,6 +68,15 @@ public class Items : MonoBehaviour
         }
 
     }
+    public void ResetItemsCountPlayer()
+    {
+        foreach (var key in PlayerItemsDict.Keys.ToList())
+        {
+            PlayerItemsDict[key] = 0;
+        }
+    }
+
+
     string ChooseItem()
     {
         GetKeys();
@@ -76,7 +85,7 @@ public class Items : MonoBehaviour
         return item;
     }
 
-    void Chooseitems(int NumItemsWanted)
+    public void Chooseitems(int NumItemsWanted)
     {
         int lenght = 0;
 
@@ -94,7 +103,7 @@ public class Items : MonoBehaviour
         } 
     }
 
-    void ChooseNumOfItems()
+    public void ChooseNumOfItems()
     {
         foreach(string Item in ItemsChoosen)
         {
@@ -106,8 +115,13 @@ public class Items : MonoBehaviour
         if (PlayerItemsDict[ButtonItem] < 99)
         {
             PlayerItemsDict[ButtonItem] += 1;
-            print(PlayerItemsDict[ButtonItem]);
         }
     }
+
+    public void RemoveItem(string ButtonItem)
+    {
+        PlayerItemsDict[ButtonItem] -= 1;
+    }
+
     
 }
