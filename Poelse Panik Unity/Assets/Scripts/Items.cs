@@ -30,8 +30,7 @@ public class Items : MonoBehaviour
         PlayerItemsDict.Add("Løg", 0);
         PlayerItemsDict.Add("SyltedeAgurker", 0);
         PlayerItemsDict.Add("Cocio", 0);
-
-        Chooseitems(3);
+        Chooseitems(2);
         ChooseNumOfItems();
     }
 

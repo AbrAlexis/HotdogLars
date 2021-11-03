@@ -11,6 +11,8 @@ public class LevelManager : MonoBehaviour
     GameObject gameManager;
     GameObject Timer;
     BestillingsTjekker bestillingsTjekkerRef;
+    public float time = 0f;
+    public int lives;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class LevelManager : MonoBehaviour
         itemsRef = gameManager.GetComponent<Items>();
         timerRef = Timer.GetComponent<Timer>();
         bestillingsTjekkerRef = gameManager.GetComponent<BestillingsTjekker>();
+        lives = 3;
     }
 
     // Update is called once per frame
@@ -27,12 +30,23 @@ public class LevelManager : MonoBehaviour
     {
         if (bestillingsTjekkerRef.BestillingerEns == true)
         {
-            float time = 0f;
+
             time += Time.deltaTime;
-            Debug.Log("ok");
-            bestillingsTjekkerRef.BestillingerEns = false;
+
+            if (time >= 5)
+            {
+                bestillingsTjekkerRef.BestillingerEns = false;
+                time = 0f;
+                ResetGame();
+            }
+        } 
+        
+        else if (lives == 0)
+        {
+            print(lives);
+            print("Game Over");
         }
-    
+
     }
 
     public void NextLevel()
@@ -44,11 +58,19 @@ public class LevelManager : MonoBehaviour
     {
         itemsRef.ResetItemsCount();
         itemsRef.ResetItemsCountPlayer();
-        itemsRef.Chooseitems(4);
+        itemsRef.Chooseitems(2);
         itemsRef.ChooseNumOfItems();
         timerRef.timeRemaining = 10f;
         timerRef.DisableButtons();
         NPCFrame.gameObject.SetActive(true);
     }
 
+    public void Lives()
+    {
+        if (bestillingsTjekkerRef.BestillingerEns == false)
+        {
+            lives -= 1;
+            print(lives);
+        }
+    }
 }
