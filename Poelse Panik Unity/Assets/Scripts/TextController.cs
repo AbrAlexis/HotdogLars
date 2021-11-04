@@ -28,7 +28,7 @@ public class TextController : MonoBehaviour
 
     public void UpdateItemText(string textItem, Dictionary<string, int> Dict, Text itemTextRef)
     {
-        itemTextRef.text = Dict[textItem].ToString();
+        itemTextRef.text = Dict[textItem].ToString() + "x";
     }
 
 }

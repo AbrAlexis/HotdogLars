@@ -22,7 +22,7 @@ public class LevelManager : MonoBehaviour
     List<Image> Hearts = new List<Image>();
     
     public Text LevelText;
-    public Text GameOver;
+    public GameObject GameOver;
 
 
     // Start is called before the first frame update
@@ -57,7 +57,7 @@ public class LevelManager : MonoBehaviour
         
         else if (lives == 0)
         {
-            GameOver.gameObject.SetActive(true);
+            GameOver.SetActive(true);
         }
 
     }
@@ -70,14 +70,14 @@ public class LevelManager : MonoBehaviour
             }
 
             Level += 1;
-            LevelText.text = "Level: " + Level;
+            LevelText.text = "Level - " + Level;
     }
 
     public void ResetGame()
     {
         itemsRef.ResetItemsCount();
         itemsRef.ResetItemsCountPlayer();
-        itemsRef.Chooseitems(Random.Range(2, Hardness));
+        itemsRef.Chooseitems(Random.Range(2, Hardness + 1));
         itemsRef.ChooseNumOfItems();
         timerRef.timeRemaining = 10f;
         timerRef.DisableButtons();
