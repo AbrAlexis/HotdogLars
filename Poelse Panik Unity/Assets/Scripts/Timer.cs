@@ -43,7 +43,6 @@ public class Timer : MonoBehaviour
         }
     }
 
-
     void EnableButtons()
     {
         if (timeRemaining <= 0 && buttons.activeSelf != true)
@@ -55,4 +54,11 @@ public class Timer : MonoBehaviour
     {
         buttons.gameObject.SetActive(false);
     } 
+
+    public void Skip()
+    {
+        timeRemaining = 0f;
+        timerText.text = "0";
+    }
+
 }

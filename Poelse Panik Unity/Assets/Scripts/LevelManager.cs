@@ -46,7 +46,7 @@ public class LevelManager : MonoBehaviour
         {
             time += Time.deltaTime;
 
-            if (time >= 5)
+            if (time >= 3)
             {
                 bestillingsTjekkerRef.BestillingerEns = false;
                 time = 0f;
@@ -70,7 +70,7 @@ public class LevelManager : MonoBehaviour
             }
 
             Level += 1;
-            LevelText.text = "Level - " + Level;
+            LevelText.text = "Level " + Level;
     }
 
     public void ResetGame()

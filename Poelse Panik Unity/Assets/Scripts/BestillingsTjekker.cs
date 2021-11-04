@@ -36,6 +36,7 @@ public class BestillingsTjekker : MonoBehaviour
         bool isEqual = Enumerable.SequenceEqual(PlayerDic, NpcDic);
         BestillingerEns = isEqual;
     }
+
         
 }
    
