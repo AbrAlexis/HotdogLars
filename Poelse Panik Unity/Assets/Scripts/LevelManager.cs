@@ -11,8 +11,19 @@ public class LevelManager : MonoBehaviour
     GameObject gameManager;
     GameObject Timer;
     BestillingsTjekker bestillingsTjekkerRef;
-    public float time = 0f;
-    public int lives;
+    float time = 0f;
+    int lives = 3;
+    int Hardness = 2;
+    int Level = 1;
+
+    public Image Heart1;
+    public Image Heart2;
+    public Image Heart3;
+    List<Image> Hearts = new List<Image>();
+    
+    public Text LevelText;
+    public Text GameOver;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +33,10 @@ public class LevelManager : MonoBehaviour
         itemsRef = gameManager.GetComponent<Items>();
         timerRef = Timer.GetComponent<Timer>();
         bestillingsTjekkerRef = gameManager.GetComponent<BestillingsTjekker>();
-        lives = 3;
+        Hearts.Add(Heart1);
+        Hearts.Add(Heart2);
+        Hearts.Add(Heart3);
+
     }
 
     // Update is called once per frame
@@ -30,35 +44,40 @@ public class LevelManager : MonoBehaviour
     {
         if (bestillingsTjekkerRef.BestillingerEns == true)
         {
-
             time += Time.deltaTime;
 
             if (time >= 5)
             {
                 bestillingsTjekkerRef.BestillingerEns = false;
                 time = 0f;
+                NextLevel();
                 ResetGame();
             }
         } 
         
         else if (lives == 0)
         {
-            print(lives);
-            print("Game Over");
+            GameOver.gameObject.SetActive(true);
         }
 
     }
 
     public void NextLevel()
-    {
+    {       
+            if (Hardness < 7)
+            {
+                Hardness += 1;
+            }
 
+            Level += 1;
+            LevelText.text = "Level: " + Level;
     }
 
     public void ResetGame()
     {
         itemsRef.ResetItemsCount();
         itemsRef.ResetItemsCountPlayer();
-        itemsRef.Chooseitems(2);
+        itemsRef.Chooseitems(Random.Range(2, Hardness));
         itemsRef.ChooseNumOfItems();
         timerRef.timeRemaining = 10f;
         timerRef.DisableButtons();
@@ -70,7 +89,9 @@ public class LevelManager : MonoBehaviour
         if (bestillingsTjekkerRef.BestillingerEns == false)
         {
             lives -= 1;
-            print(lives);
+            Hearts[0].gameObject.SetActive(false);
+            Hearts.RemoveAt(0);
+
         }
     }
 }

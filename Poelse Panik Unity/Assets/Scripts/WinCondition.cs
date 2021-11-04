@@ -20,14 +20,13 @@ public class WinCondition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        YouWin();
     }
     public void YouWin()
     {
         if (bestillingsTjekkerRef.BestillingerEns == true)
         {
             checkOrdreText.text = "Ens";
-
         }
 
         else if (bestillingsTjekkerRef.BestillingerEns == false)

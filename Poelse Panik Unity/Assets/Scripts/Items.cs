@@ -106,7 +106,7 @@ public class Items : MonoBehaviour
     {
         foreach(string Item in ItemsChoosen)
         {
-            ItemsDict[Item] = Random.Range(1, 5);
+            ItemsDict[Item] = Random.Range(1, 6);
         }
     }
     public void AddInventoryItem(string ButtonItem)
