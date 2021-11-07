@@ -8,21 +8,28 @@ public class Timer : MonoBehaviour
     public Text timerText;
     public Image NPCFrame;
     public GameObject buttons;
-    public float timeRemaining = 10f;
+    public float timeRemaining = 11f;
+    GameObject gameManager;
+    LevelManager LevelManagerRef;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager");
+        LevelManagerRef = gameManager.GetComponent<LevelManager>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        DisplayTimer();
-        HideOrder();
-        EnableButtons();
+        if (LevelManagerRef.GameOn == true) 
+        {
+            DisplayTimer();
+            HideOrder();
+            EnableButtons();
+        }
     }
 
     void DisplayTimer()
@@ -60,5 +67,4 @@ public class Timer : MonoBehaviour
         timeRemaining = 0f;
         timerText.text = "0";
     }
-
 }

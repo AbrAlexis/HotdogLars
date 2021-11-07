@@ -37,13 +37,4 @@ public class ItemDisplayControl : MonoBehaviour
             itemImg.gameObject.SetActive(true);
         }
     }
-
-
-    public void MakeClone(Dictionary<string, int> dict, Dictionary<string, int> dict2)
-    {
-        foreach (KeyValuePair<string, int> entry in dict)
-        {
-            dict2.Add(entry.Key, entry.Value);
-        }
-    }
 }

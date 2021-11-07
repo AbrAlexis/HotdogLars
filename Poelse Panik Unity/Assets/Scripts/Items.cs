@@ -14,24 +14,6 @@ public class Items : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ItemsDict.Add("Brød", 0);
-        ItemsDict.Add("Fritter", 0);
-        ItemsDict.Add("Pølse", 0);
-        ItemsDict.Add("Cola", 0);
-        ItemsDict.Add("Løg", 0);
-        ItemsDict.Add("SyltedeAgurker", 0);
-        ItemsDict.Add("Cocio", 0);
-
-
-        PlayerItemsDict.Add("Brød", 0);
-        PlayerItemsDict.Add("Fritter", 0);
-        PlayerItemsDict.Add("Pølse", 0);
-        PlayerItemsDict.Add("Cola", 0);
-        PlayerItemsDict.Add("Løg", 0);
-        PlayerItemsDict.Add("SyltedeAgurker", 0);
-        PlayerItemsDict.Add("Cocio", 0);
-        Chooseitems(2);
-        ChooseNumOfItems();
     }
 
     // Update is called once per frame

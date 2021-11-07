@@ -12,8 +12,8 @@ public class LevelManager : MonoBehaviour
     GameObject Timer;
     BestillingsTjekker bestillingsTjekkerRef;
     float time = 0f;
-    int lives = 3;
-    int Hardness = 2;
+    public int lives = 3;
+    public int Hardness = 2;
     int Level = 1;
 
     public Image Heart1;
@@ -23,6 +23,7 @@ public class LevelManager : MonoBehaviour
     
     public Text LevelText;
     public GameObject GameOver;
+    public bool GameOn = false;
 
 
     // Start is called before the first frame update
@@ -36,7 +37,20 @@ public class LevelManager : MonoBehaviour
         Hearts.Add(Heart1);
         Hearts.Add(Heart2);
         Hearts.Add(Heart3);
-
+        itemsRef.ItemsDict.Add("Brød", 0);
+        itemsRef.ItemsDict.Add("Fritter", 0);
+        itemsRef.ItemsDict.Add("Pølse", 0);
+        itemsRef.ItemsDict.Add("Cola", 0);
+        itemsRef.ItemsDict.Add("Løg", 0);
+        itemsRef.ItemsDict.Add("SyltedeAgurker", 0);
+        itemsRef.ItemsDict.Add("Cocio", 0);
+        itemsRef.PlayerItemsDict.Add("Brød", 0);
+        itemsRef.PlayerItemsDict.Add("Fritter", 0);
+        itemsRef.PlayerItemsDict.Add("Pølse", 0);
+        itemsRef.PlayerItemsDict.Add("Cola", 0);
+        itemsRef.PlayerItemsDict.Add("Løg", 0);
+        itemsRef.PlayerItemsDict.Add("SyltedeAgurker", 0);
+        itemsRef.PlayerItemsDict.Add("Cocio", 0);
     }
 
     // Update is called once per frame
@@ -58,6 +72,7 @@ public class LevelManager : MonoBehaviour
         else if (lives == 0)
         {
             GameOver.SetActive(true);
+            GameOn = false;
         }
 
     }
