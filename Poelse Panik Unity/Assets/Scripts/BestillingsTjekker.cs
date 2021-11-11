@@ -13,9 +13,10 @@ public class BestillingsTjekker : MonoBehaviour
     GameObject gameManager;
     public Dictionary<string, int> PlayerDic = new Dictionary<string, int>();
     public Dictionary<string, int> NpcDic = new Dictionary<string, int>();
-
-
+    public List<string> Ens = new List<string>();
+    public List<string> IkkeEns = new List<string>();
     public bool BestillingerEns = false;
+
     void Start()
     {
         gameManager = GameObject.Find("GameManager");
@@ -37,6 +38,23 @@ public class BestillingsTjekker : MonoBehaviour
         BestillingerEns = isEqual;
     }
 
-        
+    public void FindRightAndWrong()
+    {
+        Ens.Clear();
+        IkkeEns.Clear();
+
+        foreach (var key in itemsRef.ItemsDict.Keys)
+        {
+            if (itemsRef.ItemsDict[key] == itemsRef.PlayerItemsDict[key])
+            {
+                Ens.Add(key);
+            }
+            
+            else
+            {
+                IkkeEns.Add(key);
+            }
+        }
+    }
 }
    

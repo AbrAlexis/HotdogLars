@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     BestillingsTjekker bestillingsTjekkerRef;
     public GameObject MenuPanel;
 
-    float time = 0f;
+    public float time = 0f;
     int lives = 3;
     int Hardness = 2;
     int Level = 1;
@@ -66,7 +66,6 @@ public class LevelManager : MonoBehaviour
             if (time >= 3)
             {
                 bestillingsTjekkerRef.BestillingerEns = false;
-                time = 0f;
                 NextLevel();
                 ResetGame();
             }
@@ -109,7 +108,7 @@ public class LevelManager : MonoBehaviour
             lives -= 1;
             Hearts[0].gameObject.SetActive(false);
             Hearts.RemoveAt(0);
-
+            ResetGame();
         }
     }
 
@@ -132,6 +131,5 @@ public class LevelManager : MonoBehaviour
         ResetGame();
         GameOver.SetActive(false);
         MenuPanel.SetActive(false);
-
     }
 }

@@ -10,12 +10,14 @@ public class ItemDisplayControl : MonoBehaviour
     Dictionary<string, int> itemsDict = new Dictionary<string, int>();
     Items itemsRef;
     GameObject gameManager;
+    BestillingsTjekker bestillingsTjekkerRef;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("GameManager");
         itemsRef = gameManager.GetComponent<Items>();
+        bestillingsTjekkerRef = gameManager.GetComponent<BestillingsTjekker>();
         itemsDict = itemsRef.ItemsDict;
     }
 

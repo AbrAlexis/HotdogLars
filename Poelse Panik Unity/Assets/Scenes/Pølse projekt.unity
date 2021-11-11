@@ -2535,7 +2535,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &544473552
 GameObject:
@@ -2666,7 +2666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0.052882355, y: 1}
-  m_AnchoredPosition: {x: 41.034027, y: -28.108002}
+  m_AnchoredPosition: {x: 41.034035, y: -28.108002}
   m_SizeDelta: {x: 62.882, y: 50.279}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &555778801
@@ -5728,7 +5728,7 @@ RectTransform:
   - {fileID: 1637587370}
   - {fileID: 7662042}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5837,7 +5837,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1302655044
 GameObject:
@@ -6255,6 +6255,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2085793971}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1982040065}
+        m_TargetAssemblyTypeName: SoundManagerScript, Assembly-CSharp
+        m_MethodName: PlayMusic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7107,6 +7119,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2085793969}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: Lives
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2085793967}
+        m_TargetAssemblyTypeName: BestillingsTjekker, Assembly-CSharp
+        m_MethodName: FindRightAndWrong
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8231,6 +8255,149 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964396505}
   m_CullTransparentMesh: 1
+--- !u!1 &1982040063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982040066}
+  - component: {fileID: 1982040065}
+  - component: {fileID: 1982040064}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1982040064
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982040063}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 20bdbb6492252bb498bf79eaf000b147, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.75
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1982040065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982040063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed11cd0f05f4d674585e2838a1c865c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  streetSoundSource: {fileID: 1982040064}
+  baggrundSound: {fileID: 8300000, guid: 20bdbb6492252bb498bf79eaf000b147, type: 3}
+  audioSourcesList: []
+--- !u!4 &1982040066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982040063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -27.577892, y: 4.6521587, z: -1131.2297}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1993012744
 GameObject:
   m_ObjectHideFlags: 0
@@ -8893,6 +9060,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 648443062}
   itemString: Fritter
+  itemImgCorret: {fileID: 21300000, guid: 451db277637035342bac610d85347ea5, type: 3}
+  itemImgWrong: {fileID: 21300000, guid: 1b269e375c48d33429ae713c39c7af73, type: 3}
+  itemImageReal: {fileID: 1234139645}
+  normalSprite: {fileID: 21300000, guid: 1fb2c09ad7689ff44ad03e8f24731fce, type: 3}
 --- !u!114 &2041772783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8907,6 +9078,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1865994974}
   itemString: Cola
+  itemImgCorret: {fileID: 21300000, guid: cd46d2951278ffe4cb3b4c3fcd43069f, type: 3}
+  itemImgWrong: {fileID: 21300000, guid: d24c0f267576c204f983ce2021ad6494, type: 3}
+  itemImageReal: {fileID: 414359192}
+  normalSprite: {fileID: 21300000, guid: 150013bb45c309548b6aa44973594463, type: 3}
 --- !u!114 &2041772784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8921,6 +9096,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1636403698}
   itemString: "Br\xF8d"
+  itemImgCorret: {fileID: 21300000, guid: 433a81849fb981749bc1891a0956ae36, type: 3}
+  itemImgWrong: {fileID: 21300000, guid: 1b6135c098916484fb5ac6b543d6e042, type: 3}
+  itemImageReal: {fileID: 475866509}
+  normalSprite: {fileID: 21300000, guid: 6cae7707ab07b6243ba25b8d0ea8792b, type: 3}
 --- !u!114 &2041772785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8935,6 +9114,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1030088646}
   itemString: "P\xF8lse"
+  itemImgCorret: {fileID: 21300000, guid: f3729f96953f5fe428870ad2c79fdb1f, type: 3}
+  itemImgWrong: {fileID: 21300000, guid: c66a98c8599841e49bfbc05349d08d60, type: 3}
+  itemImageReal: {fileID: 1964396508}
+  normalSprite: {fileID: 21300000, guid: 147837e4f6808a24e97052e46909b638, type: 3}
 --- !u!114 &2041772786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8949,6 +9132,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1501274581}
   itemString: "L\xF8g"
+  itemImgCorret: {fileID: 21300000, guid: 7bee0e29c33b19a45b8e26f160115fb8, type: 3}
+  itemImgWrong: {fileID: 21300000, guid: 3e432ee4c36a73d47b6666cd772a85c3, type: 3}
+  itemImageReal: {fileID: 905168526}
+  normalSprite: {fileID: 21300000, guid: 55b1377b5e0e32740bce65e1987ba179, type: 3}
 --- !u!114 &2041772787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8963,6 +9150,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1803218730}
   itemString: Cocio
+  itemImgCorret: {fileID: 21300000, guid: 5d1f17461c41f3943a8bd3cae4026d9c, type: 3}
+  itemImgWrong: {fileID: 21300000, guid: ed5ab99dfec8c7f4b9a034fd1b0acd40, type: 3}
+  itemImageReal: {fileID: 1455497786}
+  normalSprite: {fileID: 21300000, guid: 526b05e828a81cc4ca1378dbb2d334fb, type: 3}
 --- !u!114 &2041772788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8977,6 +9168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1436048345}
   itemString: SyltedeAgurker
+  itemImgCorret: {fileID: 21300000, guid: fde62e5d4a453f24183a04aeab963d0f, type: 3}
+  itemImgWrong: {fileID: 21300000, guid: 4e937d255a9ac03489303c4ba2a6397e, type: 3}
+  itemImageReal: {fileID: 1027597869}
+  normalSprite: {fileID: 21300000, guid: 50f487bf0b1804547b77f168254c6a52, type: 3}
 --- !u!1 &2085793966
 GameObject:
   m_ObjectHideFlags: 0
@@ -9010,6 +9205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baabecf25bd2d974897a664273a8fe55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ens: []
+  IkkeEns: []
   BestillingerEns: 0
 --- !u!4 &2085793968
 Transform:
@@ -9037,6 +9234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75269fa69249b748a0ee7d090039f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MenuPanel: {fileID: 0}
+  time: 0
   Heart1: {fileID: 76890980}
   Heart2: {fileID: 110487267}
   Heart3: {fileID: 597201142}
