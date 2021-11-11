@@ -7,23 +7,26 @@ public class LevelManager : MonoBehaviour
 {
     Items itemsRef;
     Timer timerRef;
-    public Image NPCFrame;
     GameObject gameManager;
     GameObject Timer;
     BestillingsTjekker bestillingsTjekkerRef;
+    public GameObject MenuPanel;
+
     float time = 0f;
-    public int lives = 3;
-    public int Hardness = 2;
+    int lives = 3;
+    int Hardness = 2;
     int Level = 1;
+
 
     public Image Heart1;
     public Image Heart2;
     public Image Heart3;
+
     List<Image> Hearts = new List<Image>();
-    
+
+    public Image NPCFrame;
     public Text LevelText;
     public GameObject GameOver;
-    public bool GameOn = false;
 
 
     // Start is called before the first frame update
@@ -72,7 +75,6 @@ public class LevelManager : MonoBehaviour
         else if (lives == 0)
         {
             GameOver.SetActive(true);
-            GameOn = false;
         }
 
     }
@@ -90,11 +92,12 @@ public class LevelManager : MonoBehaviour
 
     public void ResetGame()
     {
+        itemsRef.ItemsChoosen.Clear();
         itemsRef.ResetItemsCount();
         itemsRef.ResetItemsCountPlayer();
-        itemsRef.Chooseitems(Random.Range(2, Hardness + 1));
+        itemsRef.Chooseitems(Random.Range(Hardness - 1, Hardness));
         itemsRef.ChooseNumOfItems();
-        timerRef.timeRemaining = 10f;
+        timerRef.timeRemaining = 11f;
         timerRef.DisableButtons();
         NPCFrame.gameObject.SetActive(true);
     }
@@ -108,5 +111,27 @@ public class LevelManager : MonoBehaviour
             Hearts.RemoveAt(0);
 
         }
+    }
+
+    public void RestartGame()
+    {
+        lives = 3;
+        Hardness = 2;
+        Level = 1;
+
+        Hearts.Clear();
+        Hearts.Add(Heart1);
+        Hearts.Add(Heart2);
+        Hearts.Add(Heart3);
+
+        foreach(Image Heart in Hearts)
+        {
+            Heart.gameObject.SetActive(true);
+        }
+
+        ResetGame();
+        GameOver.SetActive(false);
+        MenuPanel.SetActive(false);
+
     }
 }

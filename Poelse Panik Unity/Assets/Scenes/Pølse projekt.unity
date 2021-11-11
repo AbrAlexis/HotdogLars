@@ -1731,8 +1731,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2085793971}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+      - m_Target: {fileID: 2085793969}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -2666,7 +2666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0.052882355, y: 1}
-  m_AnchoredPosition: {x: 41.034023, y: -28.108002}
+  m_AnchoredPosition: {x: 41.034027, y: -28.108002}
   m_SizeDelta: {x: 62.882, y: 50.279}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &555778801
@@ -6430,7 +6430,7 @@ RectTransform:
   - {fileID: 1027597867}
   - {fileID: 1715839444}
   m_Father: {fileID: 2041772778}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7839,7 +7839,7 @@ RectTransform:
   - {fileID: 1455497784}
   - {fileID: 680564564}
   m_Father: {fileID: 2041772778}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8807,8 +8807,8 @@ RectTransform:
   - {fileID: 1636403695}
   - {fileID: 1865994971}
   - {fileID: 1501274579}
-  - {fileID: 1803218728}
   - {fileID: 1436048343}
+  - {fileID: 1803218728}
   m_Father: {fileID: 1279674759}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9037,15 +9037,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75269fa69249b748a0ee7d090039f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCFrame: {fileID: 663211574}
-  lives: 3
-  Hardness: 2
   Heart1: {fileID: 76890980}
   Heart2: {fileID: 110487267}
   Heart3: {fileID: 597201142}
+  NPCFrame: {fileID: 663211574}
   LevelText: {fileID: 743515187}
   GameOver: {fileID: 1637587369}
-  GameOn: 0
 --- !u!114 &2085793970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9088,6 +9085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea3a86b0d9180746979dc9e3ac4d172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ItemsChoosen: []
 --- !u!1 &2091271005
 GameObject:
   m_ObjectHideFlags: 0

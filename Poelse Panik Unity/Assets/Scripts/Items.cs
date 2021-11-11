@@ -9,7 +9,7 @@ public class Items : MonoBehaviour
     public Dictionary<string, int> ItemsDict = new Dictionary<string, int>();
     public Dictionary<string, int> PlayerItemsDict = new Dictionary<string, int>();
     List<string> KeysLst = new List<string>();
-    List<string> ItemsChoosen = new List<string>();
+    public List<string> ItemsChoosen = new List<string>();
 
     // Start is called before the first frame update
     void Start()
@@ -30,25 +30,15 @@ public class Items : MonoBehaviour
         }
     }
 
-    void GetKeys()
-    {
-        foreach (string key in ItemsDict.Keys)
-        {
-            KeysLst.Add(key);
-
-        }
-    }
-
     public void ResetItemsCount() 
     {
-        GetKeys();
-
-        foreach (string key in KeysLst)
+        foreach (var key in ItemsDict.Keys.ToList())
         {
             ItemsDict[key] = 0;
         }
 
     }
+
     public void ResetItemsCountPlayer()
     {
         foreach (var key in PlayerItemsDict.Keys.ToList())
@@ -60,8 +50,7 @@ public class Items : MonoBehaviour
 
     string ChooseItem()
     {
-        GetKeys();
-
+        KeysLst = ItemsDict.Keys.ToList();
         string item = KeysLst[Random.Range(0, KeysLst.Count)];
         return item;
     }
