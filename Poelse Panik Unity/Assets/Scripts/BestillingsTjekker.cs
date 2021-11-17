@@ -16,6 +16,7 @@ public class BestillingsTjekker : MonoBehaviour
     public List<string> Ens = new List<string>();
     public List<string> IkkeEns = new List<string>();
     public bool BestillingerEns = false;
+    public bool BestillingerIkkeEns = false;
 
     void Start()
     {
@@ -35,7 +36,18 @@ public class BestillingsTjekker : MonoBehaviour
     public void CompareOrders()
     {
         bool isEqual = Enumerable.SequenceEqual(PlayerDic, NpcDic);
-        BestillingerEns = isEqual;
+
+        if (isEqual == true)
+        {
+            BestillingerEns = true;
+            BestillingerIkkeEns = false;
+        }
+
+        else
+        {
+            BestillingerEns = false;
+            BestillingerIkkeEns = true;
+        }
     }
 
     public void FindRightAndWrong()

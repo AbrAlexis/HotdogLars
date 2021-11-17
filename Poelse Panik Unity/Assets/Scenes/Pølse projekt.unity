@@ -2666,7 +2666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0.052882355, y: 1}
-  m_AnchoredPosition: {x: 41.034035, y: -28.108002}
+  m_AnchoredPosition: {x: 41.034054, y: -28.108002}
   m_SizeDelta: {x: 62.882, y: 50.279}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &555778801
@@ -6252,18 +6252,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2085793971}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: StartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1982040065}
         m_TargetAssemblyTypeName: SoundManagerScript, Assembly-CSharp
         m_MethodName: PlayMusic
@@ -9208,6 +9196,7 @@ MonoBehaviour:
   Ens: []
   IkkeEns: []
   BestillingerEns: 0
+  BestillingerIkkeEns: 0
 --- !u!4 &2085793968
 Transform:
   m_ObjectHideFlags: 0
@@ -9236,6 +9225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuPanel: {fileID: 0}
   time: 0
+  evaluating: 0
   Heart1: {fileID: 76890980}
   Heart2: {fileID: 110487267}
   Heart3: {fileID: 597201142}

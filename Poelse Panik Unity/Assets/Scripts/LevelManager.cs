@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
     int lives = 3;
     int Hardness = 2;
     int Level = 1;
-
+    public bool evaluating = false;
 
     public Image Heart1;
     public Image Heart2;
@@ -61,6 +61,7 @@ public class LevelManager : MonoBehaviour
     {
         if (bestillingsTjekkerRef.BestillingerEns == true)
         {
+            evaluating = true;
             time += Time.deltaTime;
 
             if (time >= 3)
@@ -68,9 +69,26 @@ public class LevelManager : MonoBehaviour
                 bestillingsTjekkerRef.BestillingerEns = false;
                 NextLevel();
                 ResetGame();
+                evaluating = false;
+                time = 0f;
             }
-        } 
-        
+        }
+
+        else if (bestillingsTjekkerRef.BestillingerIkkeEns == true)
+        {
+            evaluating = true;
+            time += Time.deltaTime;
+
+            if (time >= 3)
+            {
+                bestillingsTjekkerRef.BestillingerIkkeEns = false;
+                ResetGame();
+                evaluating = false;
+                time = 0f;
+            }
+        }
+
+
         else if (lives == 0)
         {
             GameOver.SetActive(true);
@@ -108,7 +126,6 @@ public class LevelManager : MonoBehaviour
             lives -= 1;
             Hearts[0].gameObject.SetActive(false);
             Hearts.RemoveAt(0);
-            ResetGame();
         }
     }
 

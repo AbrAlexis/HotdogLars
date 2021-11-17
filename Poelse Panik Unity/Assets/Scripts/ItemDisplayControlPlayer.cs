@@ -32,17 +32,16 @@ public class ItemDisplayControlPlayer : ItemDisplayControl
     void Update()
     {
         DisplayItem(itemString, itemImage, itemsDictPlayer);
-        ShowRightAndWrong(itemString, itemImageReal, itemImgCorret, itemImgWrong);
-        print(levelManagerRef.time);
 
-        if (levelManagerRef.time >= 3)
+        if (levelManagerRef.evaluating == true)
         {
-            bestillingsTjekkerRef.Ens.Clear();
-            bestillingsTjekkerRef.IkkeEns.Clear();
-            itemImageReal.sprite = normalSprite;
-            levelManagerRef.time = 0f;
+            ShowRightAndWrong(itemString, itemImageReal, itemImgCorret, itemImgWrong);
         }
 
+        else
+        {
+            ResetImage();
+        }
     }
 
     public void ShowRightAndWrong(string itemString, Image itemImageReal, Sprite itemImgCorret, Sprite itemImgWrong)
@@ -57,5 +56,10 @@ public class ItemDisplayControlPlayer : ItemDisplayControl
             itemImageReal.sprite = itemImgWrong;
         }
 
+    }
+
+    public void ResetImage()
+    {
+        itemImageReal.sprite = normalSprite;
     }
 }
