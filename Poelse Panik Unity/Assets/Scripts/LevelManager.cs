@@ -10,7 +10,10 @@ public class LevelManager : MonoBehaviour
     GameObject gameManager;
     GameObject Timer;
     BestillingsTjekker bestillingsTjekkerRef;
+    Menu menuRef;
+
     public GameObject MenuPanel;
+
 
     public float time = 0f;
     int lives = 3;
@@ -37,6 +40,7 @@ public class LevelManager : MonoBehaviour
         itemsRef = gameManager.GetComponent<Items>();
         timerRef = Timer.GetComponent<Timer>();
         bestillingsTjekkerRef = gameManager.GetComponent<BestillingsTjekker>();
+        menuRef = gameManager.GetComponent<Menu>();
         Hearts.Add(Heart1);
         Hearts.Add(Heart2);
         Hearts.Add(Heart3);
@@ -149,6 +153,6 @@ public class LevelManager : MonoBehaviour
 
         ResetGame();
         GameOver.SetActive(false);
-        MenuPanel.SetActive(false);
+        menuRef.HideMenu();
     }
 }

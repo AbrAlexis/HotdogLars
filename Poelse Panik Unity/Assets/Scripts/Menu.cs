@@ -45,4 +45,15 @@ public class Menu : MonoBehaviour
     {
         StartImg.sprite = StartGreenSprite;
     }
+
+    public void BackToMenu()
+    {
+        MenuPanel.SetActive(true);
+    }
+
+    public void HideMenu()
+    {
+        MenuPanel.SetActive(false);
+    }
+
 }
