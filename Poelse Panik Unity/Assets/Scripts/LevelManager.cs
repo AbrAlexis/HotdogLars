@@ -61,6 +61,7 @@ public class LevelManager : MonoBehaviour
     {
         if (bestillingsTjekkerRef.BestillingerEns == true)
         {
+            timerRef.DisableButtons();
             evaluating = true;
             time += Time.deltaTime;
 
@@ -76,6 +77,7 @@ public class LevelManager : MonoBehaviour
 
         else if (bestillingsTjekkerRef.BestillingerIkkeEns == true)
         {
+            timerRef.DisableButtons();
             evaluating = true;
             time += Time.deltaTime;
 
